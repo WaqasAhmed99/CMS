@@ -235,5 +235,26 @@
   <footer>
     <p>© 2023 WHA Trust Pool. All rights reserved.</p>
   </footer>
+
+  <script>
+        // Function to clear the cache and reload the page
+        function reloadPage() {
+            // Clear the cache
+            if ('caches' in window) {
+                caches.keys().then(function(names) {
+                    names.forEach(function(name) {
+                        caches.delete(name);  // Delete cache
+                    });
+                });
+            }
+
+            // Reload the page
+            location.reload(true);
+        }
+
+        // Set an interval to reload the page every 5 minutes (300000 milliseconds)
+        setInterval(reloadPage, 300000); // 300000ms = 5 minutes
+    </script>
+
 </body>
 </html>
