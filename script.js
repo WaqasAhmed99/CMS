@@ -28,38 +28,38 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "Committee 4",
       members: [
-        "200042", 
-        "412042", 
-        "912343",  // User ka code (Month 1)
-        "212046", 
-        "412042", 
-        ["912042", "912343"],  // User ka code (Month 2)
-        "800042", 
-        ["912042", "912042", "700042", "912343"],  // User ka code (Month 4)
-        "400046", 
-        "400042", 
-        "412042", 
-        "412042", 
-        "212046", 
-        "412042", 
-        "600046", 
-        "200047", 
-        ["800043", "912343"],  // User ka code (Month 5)
-        "700047", 
-        "912042", 
-        "600344", 
-        "200042", 
-        ["212046", "212046", "700042", "912343"], 
-        "600046", 
-        "800042", 
-        "700047", 
-        "912042", 
-        "800042", 
-        "412042", 
-        "200042", 
-        "200042"
+        "200042", //1
+        "412042", //2
+        "912343",  // User ka code (Month 1)  //3
+        "212046", //4
+        "412042", //5
+        ["912042", "912343"],  // User ka code (Month 2) //6
+        "800042", //7
+        ["912042", "912042", "700042", "912343"],  // User ka code (Month 4)  //8
+        "200047", //9
+        "400042", //10
+        "412042", //11
+        "412042", //12
+        "212046", //13
+        "412042", //14
+        "600046", //15
+        "200046", //16
+        ["800043", "912343"],  // User ka code (Month 5)  //17
+        "700047", //18
+        "912042", //19
+        "600344", //20
+        "200042", //21
+        ["212046", "212046", "700042", "912343"], //22
+        "600046", //23
+        "400046", //24
+        "700047", //25
+        "912042", //26
+        "800042", //27
+        "412042", //28
+        "200042", //29
+        "200042"  //30
       ],      
-      memberNames: ["Aliya", "Iqra", "Waqas", "Ahtisham", "Iqra", ["Zohaib", "Waqas Ahmed"], "Tasbiha", ["Zohaib", "Zohaib", "Syeda Shahida", "Waqas"], "Hareem Fatima Hunain", "Humaira", "Iqra", "Iqra", "Ahtisham", "Iqra", "Mehrin", "Atiq", ["Ubaid", "Waqas"], "Shakoor", "Zohaib", "Meer Mehran Bhatti", "Aliya", ["Ahtisham", "Ahtisham", "Syeda Shahida", "Waqas"], "Mehrin", "Ubaid Raza", "Shakoor", "Zohaib", "Tasbiha", "Iqra", "Aliya", "Aliya"], // Corresponding names
+      memberNames: ["Aliya", "Iqra", "Waqas", "Ahtisham", "Iqra", ["Zohaib", "Waqas Ahmed"], "Tasbiha", ["Zohaib", "Zohaib", "Syeda Shahida", "Waqas"], "Atiq", "Humaira", "Iqra", "Iqra", "Ahtisham", "Iqra", "Mehrin", "Ubaid Raza", ["Ubaid", "Waqas"], "Shakoor", "Zohaib", "Meer Mehran Bhatti", "Aliya", ["Ahtisham", "Ahtisham", "Syeda Shahida", "Waqas"], "Mehrin", "Hareem Fatima Hunain", "Shakoor", "Zohaib", "Tasbiha", "Iqra", "Aliya", "Aliya"], // Corresponding names
       startDate: new Date("2025-02-01"),
       committeePrice: 10000,
       isClosed: false,
@@ -254,11 +254,41 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       name: "Committee 4",
-      members: ["200042", "412042", "912343", "212046", "412042", ["912042", "912343"], "800042", ["912042", "912042", "700042", "912343"], "400046", "400042", "412042", "412042", "212046", "412042", "600046", "200047", ["800043", "912343"], "700047", "912042", "600344", "200042", ["212046", "212046", "700042", "912343"], "600046", "800042", "700047", "912042", "800042", "412042", "200042", "200042"], // Example codes
-      memberNames: ["Aliya", "Iqra", "Waqas", "Ahtisham", "Iqra", ["Zohaib", "Waqas Ahmed"], "Tasbiha", ["Zohaib", "Zohaib", "Syeda Shahida", "Waqas"], "Hareem Fatima Hunain", "Humaira", "Iqra", "Iqra", "Ahtisham", "Iqra", "Mehrin", "Atiq", ["Ubaid", "Waqas"], "Shakoor", "Zohaib", "Meer Mehran Bhatti", "Aliya", ["Ahtisham", "Ahtisham", "Syeda Shahida", "Waqas"], "Mehrin", "Ubaid Raza", "Shakoor", "Zohaib", "Tasbiha", "Iqra", "Aliya", "Aliya"], // Corresponding names
+      members: [
+        "200042", //1
+        "412042", //2
+        "912343",  // User ka code (Month 1)  //3
+        "212046", //4
+        "412042", //5
+        ["912042", "912343"],  // User ka code (Month 2) //6
+        "800042", //7
+        ["912042", "912042", "700042", "912343"],  // User ka code (Month 4)  //8
+        "200047", //9
+        "400042", //10
+        "412042", //11
+        "412042", //12
+        "212046", //13
+        "412042", //14
+        "600046", //15
+        "200046", //16
+        ["800043", "912343"],  // User ka code (Month 5)  //17
+        "700047", //18
+        "912042", //19
+        "600344", //20
+        "200042", //21
+        ["212046", "212046", "700042", "912343"], //22
+        "600046", //23
+        "400046", //24
+        "700047", //25
+        "912042", //26
+        "800042", //27
+        "412042", //28
+        "200042", //29
+        "200042"  //30
+      ],      
+      memberNames: ["Aliya", "Iqra", "Waqas", "Ahtisham", "Iqra", ["Zohaib", "Waqas Ahmed"], "Tasbiha", ["Zohaib", "Zohaib", "Syeda Shahida", "Waqas"], "Atiq", "Humaira", "Iqra", "Iqra", "Ahtisham", "Iqra", "Mehrin", "Ubaid Raza", ["Ubaid", "Waqas"], "Shakoor", "Zohaib", "Meer Mehran Bhatti", "Aliya", ["Ahtisham", "Ahtisham", "Syeda Shahida", "Waqas"], "Mehrin", "Hareem Fatima Hunain", "Shakoor", "Zohaib", "Tasbiha", "Iqra", "Aliya", "Aliya"], // Corresponding names
       startDate: new Date("2025-02-01"),
       committeePrice: 10000,
-      currentIndex: 0,
       isClosed: false,
     },
   ];
