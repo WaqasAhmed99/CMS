@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMS</title>
+  <link rel="shortcut icon" href="logo.ico.ico">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Noto Nastaliq Urdu' rel='stylesheet'>
+  <style>
+  body {
+      font-family: 'Noto Nastaliq Urdu';
+  }
+  </style> 
+</head>
+<body>
+  <!-- Header with Logo and Title -->
+<header id="home">
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+  </div>
+  <div class="title">
+    <h1>کمیٹی مینیجمینٹ سسٹم</h1>
+  </div>
+</header>
+
+<!-- Sticky Navbar with Navigation Links -->
+<nav class="sticky-nav">
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <!-- <a href="#rules">Rules</a> -->
+    <a href="#news">News</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+  <!-- Committee Rules -->
+  <!-- <section id="rules" class="rules">
+    <div class="rules-card">
+      <h2 class="center">Committee Rules</h2>
+      <div class="card-container">
+        <div id="rule" class="card">
+          <h3>Rule 1</h3>
+          <p>Har month ki 10 Tarikh se pehle member committee jama karwade.</p>
+        </div>
+        <div id="rule" class="card">
+          <h3>Rule 2</h3>
+          <p>Har member ko committee ki raqam month ki 15 Tarikh tak mil jayegi.</p>
+        </div>
+        <div id="rule" class="card">
+          <h3>Rule 3</h3>
+          <p>Agar koi member committee se nikalta hai, toh uski bhari hui raqam committee khatam hone ke baad milegi.</p>
+        </div>
+        <div id="rule" class="card">
+          <h3>Rule 4</h3>
+          <p>Agar kisi member ne committee bar waqt ada nahi ki, toh usey committee se nikala ja sakta hai.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <div class="user-committee-card">
+    <h3>For English language Click the below button</h3>
+    <button class="toggle-btn" id="toggleBtn">Click here</button>
+      </div>
+
+<!-- User Input Card -->
+<div class="user-committee-card">
+  <h2 class="center">:اپنی کمیٹی کی تفصیلات حاصل کریں</h2>
+  <div class="user-card-container">
+    <div class="card">
+      <p>برائے مہربانی جو 6 ڈیجیٹ کا کوڈ آپکو فراہم گیا ہے وہ درج کریں؟ </p>
+      <input id="user-code" maxlength="6" />
+      <button class="button">تفصیلات دیکھیئے</button>
+    </div>
+    <div id="user-details" class="card">
+      <p id="user-message"></p>
+      <a id="whatsapp-link" target="_blank">واٹس ایپ پر ہم سے رابطہ کرنے کے لیے یہاں کلک کریں۔</a>
+      <button class="close-button">بند کردیں</button>
+              <!-- Add onclick event to call the showStatus function when button is clicked -->
+              <button class="check-status" onclick="redirectToCheckStatus()">ادائیگی کی معلومات چیک کریں۔</button>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Custom Alert Box -->
+<div id="custom-alert" class="custom-alert">
+  <div class="custom-alert-content">
+    <p id="custom-alert-message"></p>
+    <button id="custom-alert-close">ٹھیک ہے</button>
+  </div>
+</div>
+
+
+
+  <!-- Home (Dashboard) Section -->
+  <section class="dashboard">
+    <!-- Committee No. 1 -->
+    <div class="committee-card">
+      <h2 class="center">کمیٹی نمبر 1 کا خلاصہ</h2>
+      <div class="card-container">
+        <div class="card"><p>کمیٹی کی قیمت <br><br><span id="committee-price-Committee 1"></span></p></div>        
+        <div class="card"><p>ماہانہ کمیٹی کی رقم <br><br><span id="monthly-amount-Committee 1"></span></p></div>
+        <div class="card"><p>کُل مہینے <br><br><span id="total-months-Committee 1"></span></p></div>
+        <div class="card"><p>کُل ممبران <br><br><span id="total-members-Committee 1"></span></p></div>
+        <div class="card"><p>کمیٹی آغاز کی تاریخ <br><br><span id="start-date-Committee 1"></span></p></div>
+        <div class="card"><p>کمیٹی کی اختتامی تاریخ <br><br><span id="end-date-Committee 1"></span></p></div>
+        <div class="card"><p>کُل وصول کنندگان <br><br><span id="total-recipients-Committee 1"></span></p></div>
+        <div class="card"><p>موجودہ ماہ میں کمیٹی حاصل کرنے والا <br><br><span id="current-recipient-Committee 1"></span></p></div>
+        <div class="card"><p>آنے والے ماہ میں کمیٹی حاصل کرنے والا <br><br><span id="next-recipient-Committee 1"></span></p></div>
+      </div>
+    </div>
+
+    <!-- Committee No. 2 -->
+    <div class="committee-card">
+      <h2 class="center">کمیٹی نمبر 2 کا خلاصہ</h2>
+      <div class="card-container">
+        <div class="card"><p>کمیٹی کی قیمت <br><br><span id="committee-price-Committee 2"></span></p></div>        
+        <div class="card"><p>ماہانہ کمیٹی کی رقم <br><br><span id="monthly-amount-Committee 2"></span></p></div>
+        <div class="card"><p>کُل مہینے <br><br><span id="total-months-Committee 2"></span></p></div>
+        <div class="card"><p>کُل ممبران <br><br><span id="total-members-Committee 2"></span></p></div>
+        <div class="card"><p>کمیٹی آغاز کی تاریخ <br><br><span id="start-date-Committee 2"></span></p></div>
+        <div class="card"><p>کمیٹی کی اختتامی تاریخ <br><br><span id="end-date-Committee 2"></span></p></div>
+        <div class="card"><p>کُل وصول کنندگان <br><br><span id="total-recipients-Committee 2"></span></p></div>
+        <div class="card"><p>موجودہ ماہ میں کمیٹی حاصل کرنے والا <br><br><span id="current-recipient-Committee 2"></span></p></div>
+        <div class="card"><p>آنے والے ماہ میں کمیٹی حاصل کرنے والا <br><br><span id="next-recipient-Committee 2"></span></p></div>
+      </div>
+    </div>
+      <!-- Committee No. 3 -->
+      <div class="committee-card">
+        <h2 class="center">کمیٹی نمبر 3 کا خلاصہ</h2>
+        <div class="card-container">
+          <div class="card"><p>کمیٹی کی قیمت <br><br><span id="committee-price-Committee 3"></span></p></div>        
+          <div class="card"><p>ماہانہ کمیٹی کی رقم <br><br><span id="monthly-amount-Committee 3"></span></p></div>
+          <div class="card"><p>کُل مہینے <br><br><span id="total-months-Committee 3"></span></p></div>
+          <div class="card"><p>کُل ممبران <br><br><span id="total-members-Committee 3"></span></p></div>
+          <div class="card"><p>کمیٹی آغاز کی تاریخ <br><br><span id="start-date-Committee 3"></span></p></div>
+          <div class="card"><p>کمیٹی کی اختتامی تاریخ <br><br><span id="end-date-Committee 3"></span></p></div>
+          <div class="card"><p>کُل وصول کنندگان <br><br><span id="total-recipients-Committee 3"></span></p></div>
+          <div class="card"><p>موجودہ ماہ میں کمیٹی حاصل کرنے والا <br><br><span id="current-recipient-Committee 3"></span></p></div>
+          <div class="card"><p>آنے والے ماہ میں کمیٹی حاصل کرنے والا <br><br><span id="next-recipient-Committee 3"></span></p></div>
+        </div>
+      </div>
+
+      <!-- Committee No. 4 -->
+      <div class="committee-card">
+        <h2 class="center">کمیٹی نمبر 4 کا خلاصہ</h2>
+        <div class="card-container">
+          <div class="card"><p>کمیٹی کی قیمت <br><br><span id="committee-price-Committee 4"></span></p></div>        
+          <div class="card"><p>ماہانہ کمیٹی کی رقم <br><br><span id="monthly-amount-Committee 4"></span></p></div>
+          <div class="card"><p>کُل مہینے <br><br><span id="total-months-Committee 4"></span></p></div>
+          <div class="card"><p>کُل ممبران <br><br><span id="total-members-Committee 4"></span></p></div>
+          <div class="card"><p>کمیٹی آغاز کی تاریخ <br><br><span id="start-date-Committee 4"></span></p></div>
+          <div class="card"><p>کمیٹی کی اختتامی تاریخ <br><br><span id="end-date-Committee 4"></span></p></div>
+          <div class="card"><p>کُل وصول کنندگان <br><br><span id="total-recipients-Committee 4"></span></p></div>
+          <div class="card"><p>موجودہ ماہ میں کمیٹی حاصل کرنے والا <br><br><span id="current-recipient-Committee 4"></span></p></div>
+          <div class="card"><p>آنے والے ماہ میں کمیٹی حاصل کرنے والا <br><br><span id="next-recipient-Committee 4"></span></p></div>
+        </div>
+      </div>  
+      <!-- Committee No. 5 -->
+    <!-- <div class="committee-card">
+        <h2 class="center">Participation in Committee No. 4 is currently active.</h2>
+        <div class="card-container">
+          <div class="card"><strong>Monthly Amount:</strong> 10,000</div>
+          <div class="card"><strong>Committee Price:</strong> 3,00,000</div>
+          <div class="card"><strong>Total Month:</strong> 30</div>
+          <div class="card"><strong>Total Members:</strong> 30</div>
+          <div class="card"><strong>Start Date:</strong> February 2025</div>
+          <div class="card"><strong>End Date:</strong> July 2027</div>
+        </div>
+      </div> -->
+    </section>
+
+  <!-- News Section -->
+  <section id="news" class="news">
+
+          <!-- New Committee Start Soon -->
+    <!-- Committee No. 5 -->
+    <!-- <div class="committee-card">
+        <h2 class="center">Committee No. 5 Will Start Soon.</h2>
+        <div class="card-container">
+            <div id="booked" class="card">Number 1: Booked</div>
+            <div id="booked" class="card">Number 2: Booked</div>
+            <div id="booked" class="card">Number 3: Booked</div>
+            <div id="booked" class="card">Number 4: Booked</div>
+            <div id="booked" class="card">Number 5: Booked</div>
+            <div id="booked" class="card">Number 6: Booked</div>
+            <div id="booked" class="card">Number 7: Booked</div>
+            <div id="booked" class="card">Number 8: Booked</div>
+            <div id="booked" class="card">Number 9: Booked</div>
+            <div id="booked" class="card">Number 10: Booked</div>
+            <div id="booked" class="card">Number 11: Booked</div>
+            <div id="booked" class="card">Number 12: Booked</div>
+            <div id="booked" class="card">Number 13: Booked</div>
+            <div id="booked" class="card">Number 14: Booked</div>
+            <div id="booked" class="card">Number 15: Booked</div>
+            <div id="booked" class="card">Number 16: Booked</div>
+            <div id="booked" class="card">Number 17: Booked</div>
+            <div id="available" class="card">Number 18: Available</div>
+            <div id="booked" class="card">Number 19: Booked</div>
+            <div id="available" class="card">Number 20: Available</div>
+            <div id="booked" class="card">Number 21: Booked</div>
+            <div id="booked" class="card">Number 22: Booked</div>
+            <div id="booked" class="card">Number 23: Booked</div>
+            <div id="booked" class="card">Number 24: Booked</div>
+            <div id="booked" class="card">Number 25: Booked</div>
+            <div id="available" class="card">Number 26: Available</div>
+            <div id="booked" class="card">Number 27: Booked</div>
+            <div id="booked" class="card">Number 28: Booked</div>
+            <div id="booked" class="card">Number 29: Booked</div>
+            <div id="booked" class="card">Number 30: Booked</div>
+
+        </div>
+      </div> -->
+
+
+      <!-- New Committee Coming Soon -->
+    <div class="committee-card">
+        <h2 class="center">کمیٹی نمبر 5: کا اعلان جلد کیا جائے گا۔ </h2>
+        <!-- <div class="card-container">
+            <div class="card">Number 1: Coming Soon</div>
+            <div class="card">Number 2: Coming Soon</div>
+            <div class="card">Number 3: Coming Soon</div>
+            <div class="card">Number 4: Coming Soon</div>
+            <div class="card">Number 5: Coming Soon</div>
+            <div class="card">Number 6: Coming Soon</div>
+            <div class="card">Number 7: Coming Soon</div>
+            <div class="card">Number 8: Coming Soon</div>
+            <div class="card">Number 9: Coming Soon</div>
+            <div class="card">Number 10: Coming Soon</div>
+            <div class="card">Number 11: Coming Soon</div>
+            <div class="card">Number 12: Coming Soon</div>
+            <div class="card">Number 13: Coming Soon</div>
+            <div class="card">Number 14: Coming Soon</div>
+            <div class="card">Number 15: Coming Soon</div>
+            <div class="card">Number 16: Coming Soon</div>
+            <div class="card">Number 17: Coming Soon</div>
+            <div class="card">Number 18: Coming Soon</div>
+            <div class="card">Number 19: Coming Soon</div>
+            <div class="card">Number 20: Coming Soon</div>
+            <div class="card">Number 21: Coming Soon</div>
+            <div class="card">Number 22: Coming Soon</div>
+            <div class="card">Number 23: Coming Soon</div>
+            <div class="card">Number 24: Coming Soon</div>
+            <div class="card">Number 25: Coming Soon</div>
+            <div class="card">Number 26: Coming Soon</div>
+            <div class="card">Number 27: Coming Soon</div>
+            <div class="card">Number 28: Coming Soon</div>
+            <div class="card">Number 29: Coming Soon</div>
+            <div class="card">Number 30: Coming Soon</div> -->
+
+        </div>
+      </div>
+
+          
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <!-- <div class="profile">
+      <img src="profile.jpg" alt="Your Picture">
+      <p>Your details go here...</p>
+    </div> -->
+    <!-- <div class="cards">
+      <div class="card">
+        <h3>Completed Committees</h3>
+        <p>5</p>
+      </div>
+      <div class="card">
+        <h3>Total Members</h3>
+        <p>30</p>
+      </div>
+    </div> -->
+    <div class="contact-card">
+      <h3>Contact</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100004188376934" target="_blank"><img src="facebook.png" alt="Facebook">Facebook</a>
+        <a href="https://www.instagram.com/waqasahmed19999/" target="_blank"><img src="Instagram.png" alt="Instagram">Instagram</a>
+        <a href="https://wa.link/e2zun3" target="_blank"><img src="Whatsapp.png" alt="Whatsapp">Whatsapp</a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2023 WHA Trust Pool. All rights reserved.</p>
+  </footer>
+
+
+  <script src="language.js"></script>
+  <script src="script-ur.js"></script>
+  <script src="payment-status.js"></script>
+
+
+
+  <script>
+    // Function to redirect to check-status.html with user code
+    function redirectToCheckStatus() {
+      const userCode = document.getElementById("user-code").value;
+      if (userCode) {
+        // Redirect to check-status.html and pass the user code via URL
+        window.location.href = `payment-status.html?userCode=${userCode}`;
+      } else {
+        alert("Please enter a valid code.");
+      }
+    }
+  </script>
+</body>
+</html>

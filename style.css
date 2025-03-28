@@ -1,0 +1,772 @@
+/* General Styles */
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f4f8;
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: linear-gradient(45deg, #4e79a7, #65bddb);
+    padding: 15px 20px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text inside the title */
+}
+
+/* Logo and Title */
+.logo img {
+    height: 70px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Sticky Navbar */
+.sticky-nav {
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    background: linear-gradient(45deg, #4e79a7, #65bddb); /* Match header background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between links */
+    padding: 10px 20px; /* Add padding for better spacing */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57; /* Highlight color on hover */
+    text-decoration: underline;
+}
+
+/* Committee Cards */
+.committee-card {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.committee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.committee-card h2.center {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Card Styles */
+.card {
+    background: linear-gradient(10deg, #e9ebee, #b8dbe7);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card strong {
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Available and Booked Status */
+#available {
+    background: linear-gradient(10deg, #e9ebee, #93e8b1);
+}
+
+#booked {
+    background: linear-gradient(10deg, #e9ebee, #d8898d);
+}
+
+/* User Input Card
+.user-input-card {
+    background: linear-gradient(10deg, #e9ebee, #b8dbe7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-input-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-input-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.user-input-card input:focus {
+    border-color: #4e79a7;
+    outline: none;
+}
+
+.user-input-card button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #4e79a7, #65bddb);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.user-input-card button:hover {
+    background: linear-gradient(45deg, #65bddb, #4e79a7);
+    transform: translateY(-2px);
+}
+
+.user-input-card button:active {
+    transform: translateY(0);
+} */
+
+/* User Details Card */
+#user-details {
+    display: none;
+    background: linear-gradient(10deg, #e9ebee, #b8dbe7);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    transition: opacity 0.3s ease;
+}
+
+#user-details p {
+    margin: 0;
+}
+
+#whatsapp-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4e79a7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#whatsapp-link:hover {
+    color: #65bddb;
+}
+
+/* News Section */
+.news {
+    padding: 20px;
+}
+
+.news-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h2.center {
+    text-align: center;
+}
+
+.news .card-container {
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 10px; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+}
+
+.news .card {
+    flex: 1 1 calc(12% - 10px);
+    /* grid-template-columns: repeat(5, 1fr); */
+}
+
+/* About Section */
+.about {
+    padding: 20px;
+}
+
+.contact-card {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons img {
+    width: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4e79a7;
+    color: white;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .committee-card h2.center {
+        font-size: 28px;
+    }
+
+    .news .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .committee-card h2.center {
+        font-size: 24px;
+    }
+
+    .card {
+        font-size: 14px;
+    }
+
+    .news .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .title h1 {
+        font-size: 26px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        font-size: 14px;
+    }
+
+    .contact-card {
+        font-size: 14px;
+    }
+
+    .news .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/* User Input Card */
+.user-committee-card {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-committee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: linear-gradient(10deg, #e9ebee, #b8dbe7);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Ensure both cards have the same height */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Field */
+input {
+    display: block;
+    margin: 1em auto;
+    border: none;
+    padding: 0;
+    width: 9ch;
+    height: 2.5em;
+    background: repeating-linear-gradient(90deg, 
+        dimgrey 0, dimgrey 1ch, 
+        transparent 0, transparent 1.5ch) 
+        0 100%/ 18ch 2px no-repeat;
+    font: normal 1.2em "Droid Sans Mono", consolas, monospace;
+    letter-spacing: 0.5ch;
+}
+
+input::placeholder {
+    color: #aaa;
+    /* font-size: 12px; */
+}
+
+input:focus {
+    outline: none;
+    color: dodgerblue;
+}
+
+/* Button Styles */
+.button, .toggle-btn, .check-status {
+    background-color: #65bddb;
+    border-radius: 100px;
+    box-shadow: rgba(44, 142, 187, 0.2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 104, 187, 0.15) 0 2px 4px, rgba(44, 165, 187, 0.15) 0 4px 8px, rgba(44, 156, 187, 0.15) 0 8px 16px, rgba(44, 142, 187, 0.15) 0 16px 32px;
+    color: #283c52;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 1em;
+}
+
+.button:hover, .toggle-btn:hover, .check-status:hover {
+    box-shadow: #4e79a7 0 -25px 18px -14px inset, rgba(44, 151, 187, 0.25) 0 1px 2px, rgba(44, 161, 187, 0.25) 0 2px 4px, rgba(44, 137, 187, 0.25) 0 4px 8px, rgba(44, 161, 187, 0.25) 0 8px 16px, rgba(44, 151, 187, 0.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+    color: white;
+}
+
+.check-status {
+    margin-left: 5px;
+}
+
+/* Close Button */
+.close-button {
+    background-color: #d8898d;
+    border-radius: 100px;
+    box-shadow: rgba(187, 44, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 44, 44, .15) 0 1px 2px, rgba(187, 44, 44, 0.15) 0 2px 4px, rgba(187, 44, 44, 0.15) 0 4px 8px, rgba(187, 44, 44, 0.15) 0 8px 16px, rgba(187, 44, 44, 0.15) 0 16px 32px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 1em;
+}
+
+.close-button:hover {
+    background-color: #c76a6f;
+    transform: scale(1.05);
+}
+
+/* User Details Card */
+#user-details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#user-details.visible {
+    display: block;
+    opacity: 1;
+}
+
+
+/* User Details Card Styling */
+#user-details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  #user-details.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Message Text Styling */
+  #user-message {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  
+  #user-message p {
+                /* margin: 10px 0; */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+             /* border-radius: 8px; */
+                  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+              /* transition: background 0.3s ease; */
+  }
+  
+  #user-message p:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  #user-message strong {
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  /* WhatsApp Link Styling */
+  #whatsapp-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #whatsapp-link:hover {
+    background-color: #128c7e;
+    transform: translateY(-2px);
+  }
+  
+  /* Close Button Styling */
+  .close-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background-color: #e60000;
+    transform: translateY(-2px);
+  }
+
+
+
+  
+
+
+
+  
+  
+  /* Center Aligned and Bold Text */
+  #user-message p:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+
+
+  /* User Details Card Styling */
+#user-details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 12px;
+    padding: 20px;
+    /* margin-top: 20px; */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%; /* Full width */
+    max-width: 700px; /* Maximum width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #user-details.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Center Aligned and Bold Text */
+  #user-message p:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+
+
+
+
+
+  /* Left Aligned Text */
+  #user-message .txt-left {
+    text-align: left;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  
+  
+  /* Spacing Between List Items */
+  #user-message p br {
+    display: block;
+    /* margin: 10px 0; Spacing between list items */
+  }
+  
+  /* Ensure Equal Width for All Cards */
+  .user-committee-card,
+  .user-card-container,
+  .card {
+    width: 100%;
+    max-width: 900px; /* Maximum width */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box; /* Include padding in width */
+  }
+  
+
+  /* Common Style for Committee Joining Message */
+.committee-join-message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+
+
+
+
+
+  /* Custom Alert Box Styling */
+.custom-alert {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .custom-alert-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 90%; /* Responsive width */
+    width: 300px; /* Fixed width for small screens */
+  }
+  
+  .custom-alert-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .custom-alert-content button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .custom-alert-content button:hover {
+    background: #0056b3;
+  }
+
+
+
+
+
+
+
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(10deg, #e9ebee, #b8dbe7);
+
+
+
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+
+    
+}
+
+
+th {
+    background: linear-gradient(10deg, #cbd0d9, #a6cddb);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    color: black;
+
+
+}
+
+.received {
+    color: green;
+}
+
+
+.not-received {
+    color: red;
+}
+
+.greeting {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.message {
+    color: #888;
+    font-style: italic;
+}

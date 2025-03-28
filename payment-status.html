@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committee Payment Status</title>
+    <link rel="shortcut icon" href="logo.ico.ico">
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .received {
+            color: green;
+        }
+        .not-received {
+            color: red;
+        }
+       
+        .greeting {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .message {
+            color: #888;
+            font-style: italic;
+        }
+    </style> -->
+</head>
+<body>
+
+    <h1>Committee Payment Status</h1>
+
+<div id="greeting" class="greeting"></div>
+
+<div id="committeeTables"></div>
+
+<script src="payment-status.js"></script>
+<script>
+  // Function to get the user code from the URL
+  function getUserCodeFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("userCode");
+  }
+
+  // Call the showStatus function when the page loads
+  window.onload = function() {
+    const userCode = getUserCodeFromURL();
+    if (userCode) {
+      // Show status for the given user code
+      showStatus(userCode);
+    } else {
+      alert("No user code found.");
+    }
+  }
+
+  // Show status function (updated to accept userCode as parameter)
+  function showStatus(userCode) {
+    const greetingDiv = document.getElementById("greeting");
+    const committeeTablesDiv = document.getElementById("committeeTables");
+    committeeTablesDiv.innerHTML = ""; // Clear previous data
+
+    const userData = Object.values(paymentTracker).filter(user => user.code === userCode);
+
+    if (userData.length > 0) {
+      greetingDiv.textContent = `Salam!, ${userData[0].name}! Here is your payment status:`;
+
+      userData.forEach(user => {
+        const table = document.createElement("table");
+        const tableHeader = `<thead><tr><th colspan="2">${user.committee}</th></tr><tr><th>Month</th><th>Status</th></tr></thead>`;
+        let tableBody = "<tbody>";
+
+        // Current month tak ke months show karein
+        const currentMonthYear = getCurrentMonthYear();
+        const monthsToShow = user.months.slice(0, user.months.indexOf(currentMonthYear) + 1);
+
+        monthsToShow.forEach((month, index) => {
+          const status = user.status[index];
+          tableBody += `
+            <tr>
+              <td>${month}</td>
+              <td class="${status === "Received" ? "received" : "not-received"}">${status}</td>
+            </tr>
+          `;
+        });
+
+        tableBody += "</tbody>";
+        table.innerHTML = tableHeader + tableBody;
+        committeeTablesDiv.appendChild(table);
+      });
+    } else {
+      greetingDiv.textContent = "";
+      alert("Invalid code! Please enter a valid code.");
+    }
+  }
+</script>
+
+</body>
+</html>
