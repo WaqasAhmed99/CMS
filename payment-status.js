@@ -423,7 +423,7 @@
 
 
 //Meer Mehran Bhatti
-[0, 1].forEach(index => {
+[1].forEach(index => {
     paymentTracker["600344-Committee 4"].status[index] = "Received";
 });
 
